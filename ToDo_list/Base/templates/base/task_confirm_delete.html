@@ -1,0 +1,7 @@
+<form method="post" action="">
+    <a href="{% url 'task_list'%}">< back</a><br>
+    {% csrf_token %}
+    are you sure to delete {{object}}<br>
+    {{form}}
+    <input type="submit" value="Confirm">
+</form>

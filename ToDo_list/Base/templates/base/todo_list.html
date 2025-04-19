@@ -1,0 +1,31 @@
+<h1>To Do List {{color}}</h1>
+    <table border="solid 2px">
+        <th> complet </th>
+        <th><a href="{% url 'task_form' %}"> New Task</a></th>
+        <th>
+            {%if request.user.is_authenticated%}
+            {{request.user}} | <a href="{% url 'logout' %}">Logout</a>
+            {%else%}
+            <a href="{%url 'login'%}">Login</a>
+            {%endif%}
+        </th>
+        <th>
+           <form method="get">
+                <input type="search" name="search" >
+                <input type="submit" value="search">
+           </form>
+        </th>
+        {%for task in tasks%}
+        <tr> <td>{{task.complet }}</td>
+             {%if task.complet == True %}
+             <td><s>Task // {{task.tiltel}}</s></td>
+             {%elif task.complet == False %}
+             <td>Task // {{task.tiltel}}</td>
+             {%endif%}
+             <td><a href="{% url 'task_detail' task.pk %}">View</a></td>
+             <td><a href="{% url 'task_update' task.pk%}">Update</a></td>
+             <td><a href="{% url 'task_delete' task.pk%}">delete</a></td>
+        </tr>
+        {%endfor%}
+    </table>
+
