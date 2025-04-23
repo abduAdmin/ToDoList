@@ -1,3 +1,5 @@
+{%extends 'main.html'%}
+{%block content%}
 <h1> New Task</h1>
 <h4><a href="{% url 'task_list' %}"><-Back</a></h4>
 <form method="post" action="">
@@ -5,3 +7,4 @@
     {{form.as_p}}
     <input type="submit" value="submet">
 </form>
+{%endblock%}

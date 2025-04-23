@@ -40,7 +40,7 @@ class TaskList(LoginRequiredMixin,ListView):
     model = Task
     template_name = 'base/todo_list.html'
     context_object_name = 'tasks'
-    ordering = ['-curntdate']
+    ordering = ['complet']
     def get_context_data(self,**kwargs):
         context = super().get_context_data(**kwargs)
         context['tasks'] = context['tasks'].filter(user=self.request.user)

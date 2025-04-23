@@ -1,6 +1,12 @@
-<form method="post" action="">
-    {% csrf_token %}
-    {{form.as_p}}
-    <input type="submit" value="Valid">
-</form>
-<p>Create acunte <a href="{%url 'register'%}">clik heir</a></p>
+{%extends 'main.html'%}
+{%block content%}
+<div class="rounded text-bg-dark m-3 p-3">
+    <form method="post" action="">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input class="text-bg-success" type="submit" value="Valid">
+    </form>
+    <p>Create acunte <a href="{%url 'register'%}">clik heir</a></p>
+</div>
+{%endblock%}
+

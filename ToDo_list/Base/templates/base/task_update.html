@@ -1,5 +1,12 @@
-<form method="post" action="">
-    {%csrf_token%}
-    {{form.as_p}}
-    <input type="submit" value="submet">
-</form>
+{%extends 'main.html'%}
+{%block content%}
+<div>
+    <form method="post" action="">
+        <div>
+            {%csrf_token%}
+            {{form.as_p}}
+            <input type="submit" value="submet">
+        </div>
+    </form>
+</div>
+{%endblock%}

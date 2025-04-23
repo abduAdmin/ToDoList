@@ -1,7 +1,12 @@
-<form method="post" action="">
-    <a href="{% url 'task_list'%}">< back</a><br>
-    {% csrf_token %}
-    are you sure to delete {{object}}<br>
-    {{form}}
-    <input type="submit" value="Confirm">
-</form>
+{%extends 'main.html'%}
+{%block content%}
+<div class="container bg-danger-subtle rounded">
+    <form method="post" action="">
+        <a href="{% url 'task_list'%}">< back</a><br>
+        {% csrf_token %}
+        are you sure to delete {{object}}<br>
+        {{form}}
+        <input class="text-bg-danger my-2 center" type="submit" value="Confirm">
+    </form>
+</div>
+{%endblock%}

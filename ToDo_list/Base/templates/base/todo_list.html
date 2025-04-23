@@ -1,31 +1,43 @@
-<h1>To Do List {{color}}</h1>
-    <table border="solid 2px">
-        <th> complet </th>
-        <th><a href="{% url 'task_form' %}"> New Task</a></th>
-        <th>
-            {%if request.user.is_authenticated%}
-            {{request.user}} | <a href="{% url 'logout' %}">Logout</a>
-            {%else%}
-            <a href="{%url 'login'%}">Login</a>
-            {%endif%}
-        </th>
-        <th>
-           <form method="get">
-                <input type="search" name="search" >
-                <input type="submit" value="search">
-           </form>
-        </th>
+{% extends 'main.html'%}
+
+{%block content%}
+<h1 id="tiltle">To Do List</h1>
+    <h5>
+        <div class="row p-2">
+                <div class="col text-light">
+                    {%if request.user.is_authenticated%}
+                    {{request.user}} | <a href="{% url 'logout' %}">Logout</a>
+                    {%else%}
+                    <a href="{%url 'login'%}">Login</a>
+                    {%endif%}
+                </div>
+             <div class="col-6">
+                 <form method="get">
+                    <input  type="search" name="search" >
+                    <input  type="submit" value="search">
+                 </form>
+             </div>
+            <div class="col">
+                <a href="{% url 'task_form' %}"> New Task</a>
+            </div>
+        </div>
+
+    </h5>
+
+    <table class="table table-hover table-" id="table">
+
         {%for task in tasks%}
-        <tr> <td>{{task.complet }}</td>
-             {%if task.complet == True %}
-             <td><s>Task // {{task.tiltel}}</s></td>
-             {%elif task.complet == False %}
-             <td>Task // {{task.tiltel}}</td>
-             {%endif%}
+        <tr> {%if task.complet %}
+             <td><s style="font-family: Arial, sans-serif; color : red; font-size: 24px;">
+                 {{task.tiltel }}</s></td>
+            {%else%}
+            <td style="font-family: Arial, sans-serif; font-size: 24px; color : green;">
+                {{task.tiltel }}</td>
+            {%endif%}
              <td><a href="{% url 'task_detail' task.pk %}">View</a></td>
              <td><a href="{% url 'task_update' task.pk%}">Update</a></td>
              <td><a href="{% url 'task_delete' task.pk%}">delete</a></td>
         </tr>
         {%endfor%}
     </table>
-
+{%endblock%}

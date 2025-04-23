@@ -1,5 +1,13 @@
-<form method="post">
-    {% csrf_token %}
-    {{form.as_p}}
-    <input type="submit" value="register">
-</form>
+{%extends 'main.html'%}
+{%block content%}
+<div class="rounded text-bg-dark m-3 p-3">
+    <form method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input class="text-bg-primary my-3" type="submit" value="register">
+        <br>
+        return page
+        <a href="{% url 'login'%}"> login</a>
+    </form>
+</div >
+{%endblock%}
