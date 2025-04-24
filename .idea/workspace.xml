@@ -6,13 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b209028f-72cf-48e3-9579-35353debc493" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ToDo_list/Base/templates/base/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/ToDo_list/Base/templates/base/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ToDo_list/Base/templates/base/task_confirm_delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/ToDo_list/Base/templates/base/task_confirm_delete.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ToDo_list/Base/templates/base/task_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/ToDo_list/Base/templates/base/task_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ToDo_list/Base/templates/base/task_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/ToDo_list/Base/templates/base/task_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ToDo_list/Base/templates/base/task_update.html" beforeDir="false" afterPath="$PROJECT_DIR$/ToDo_list/Base/templates/base/task_update.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ToDo_list/Base/templates/base/todo_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/ToDo_list/Base/templates/base/todo_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ToDo_list/Base/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/ToDo_list/Base/templates/registration/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ToDo_list/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/ToDo_list/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

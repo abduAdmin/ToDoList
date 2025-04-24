@@ -14,11 +14,11 @@
              <div class="col-6">
                  <form method="get">
                     <input  type="search" name="search" >
-                    <input  type="submit" value="search">
+                    <button type="submit">🔍</button>
                  </form>
              </div>
             <div class="col">
-                <a href="{% url 'task_form' %}"> New Task</a>
+                <a href="{% url 'task_form' %}"><button>➕</button></a>
             </div>
         </div>
 
@@ -32,11 +32,11 @@
                  {{task.tiltel }}</s></td>
             {%else%}
             <td style="font-family: Arial, sans-serif; font-size: 24px; color : green;">
-                {{task.tiltel }}</td>
+               📌 {{task.tiltel }}</td>
             {%endif%}
-             <td><a href="{% url 'task_detail' task.pk %}">View</a></td>
-             <td><a href="{% url 'task_update' task.pk%}">Update</a></td>
-             <td><a href="{% url 'task_delete' task.pk%}">delete</a></td>
+             <td><a href="{% url 'task_detail' task.pk %}">📄</a></td>
+             <td><a href="{% url 'task_update' task.pk%}">✏️</a></td>
+             <td><a href="{% url 'task_delete' task.pk%}">🗑️</a></td>
         </tr>
         {%endfor%}
     </table>
